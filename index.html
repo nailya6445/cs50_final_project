@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+{% block main %}
+        <table style="width:100%">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Country</th>
+                <th>Language</th>
+                <th>Status</th>
+                <th>Last update</th>
+            </tr>
+                {% for el in list %}
+                    <tr>
+                        <td>
+                            {{ el.Title1 }}
+                        </td>
+                        <td>
+                            {{ el.Author }}
+                        </td>
+                        <td>
+                            {{ el.Year }}
+                        </td>
+                        <td>
+                            {{ el.Country }}
+                        </td>
+                        <td>
+                            {{ el.Language }}
+                        </td>
+                        <td>
+                            {{ el.Status }}
+                        </td>
+                        <td>
+                            {{ el.LastUpdate }}
+                        </td>
+                    </tr>
+                {% endfor %}
+        </table>
+        <tr>
+            <p> </p>
+
+        </tr>
+        <a class="card-header" href="/"><span class="blue">Your quote</span></a>
+         <tr>
+             <p> </p>
+             <p> </p>
+        </tr>
+        <a class="card-title"><span class="grey"><p>{{ yourquote }}</p></span></a>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add your Book
+{% endblock %}
+{% block main %}
+    <form action="/adjust">
+        <div class="form-group">
+        <p>Choose your Book</p>
+        <label class="sr-only" for="q">Title, Author</label>
+        <input class="form-control" id="q" placeholder="Title, Author" type="text"/>
+        </div>
+        <button class="btn" type="submit">Add</button>
+    </form>
+{% endblock %}

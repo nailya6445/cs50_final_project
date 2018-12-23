@@ -67,8 +67,8 @@ def search():
 
             books = db.execute("SELECT Title, Author FROM book WHERE Title LIKE: q OR Author LIKE: q",
                                 q=q)
-        return jsonify(books)
-    return render_template("adjust.html")
+     return jsonify(books)
+    
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
